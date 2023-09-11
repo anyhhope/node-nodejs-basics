@@ -2,7 +2,7 @@ import { stdin, stdout } from 'process';
 import { Transform } from 'stream';
 
 const reverseTransform = new Transform({
-    transform(chunk, encoding, callback) {
+    transform(chunk, _, callback) {
         this.push(chunk.toString().split('').reverse().join(''));
         callback();
     }
